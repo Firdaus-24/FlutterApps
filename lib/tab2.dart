@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'chat.dart';
 
 class Tab2 extends StatefulWidget {
   const Tab2({super.key});
@@ -25,7 +26,10 @@ class _Tab2State extends State<Tab2> {
             title: Text('Jane Doe'),
             subtitle: Text('Kenalan dong'),
             onTap: () {
-              // handle tap on chat
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ChatScreen()),
+              );
             },
           ),
           ListTile(
@@ -56,6 +60,20 @@ class _Tab2State extends State<Tab2> {
         backgroundColor: Color.fromARGB(255, 190, 3, 3),
         child: Icon(Icons.chat_bubble_outlined),
         onPressed: () {},
+      ),
+    );
+  }
+}
+
+class ViewScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('View Screen'),
+      ),
+      body: Center(
+        child: Text('This is the view screen'),
       ),
     );
   }

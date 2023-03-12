@@ -19,7 +19,7 @@ class _Tab1State extends State<Tab1> {
       SliverList(
         delegate: SliverChildBuilderDelegate(
           (context, index) => ListTile(title: Text('Item #$index')),
-          childCount: 20,
+          childCount: 10,
         ),
       ),
     ]));
